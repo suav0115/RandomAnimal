@@ -9,13 +9,22 @@
     
     <h1>Choose Your Animal!</h1>
     
-    <input id="dogButton" type="submit" value="Dog"></input>
-    <input id="catButton" type="submit" value="Cat"></input>
-    
-    <div id="thePic"></div>
-
+    <div id = "app">
+      <button v-on:click="getDog">Dog</button>
+      <button v-on:click="getCat">Cat</button>
+      <div v-if="loading">
+        <p>Loading...</p>
+      </div>
+      <div id = "picture" v-else>
+        <img v-bind:src="picture">
+      </div>
+    </div>
+  <a href="https://github.com/suav0115/RandomAnimal">A link to my github</a>
+  <br>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
-    <script text="type/javascript" src="/RandomAnimal/theScript.js">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script text="type/javascript" src="/RandomAnimal/javascript.js">
     </script>
 
   </body>
